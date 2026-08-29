@@ -1,41 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Engineering Portfolio | First Year </title>
+<title> Student Registration Form </title>
+<style>
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+background: linear gradient(135deg, #eef2f7, #dbe4ee);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 30px 15px;
+}
+.form-container {
+background: #ffffff;
+max-width:520px;
+width:100%
+padding: 35px 30px;
+border-radius: 18px;
+box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+ input[type="text"],
+ input[type="email"],
+ select,
+ textarea {
+ width="100%;
+ padding: 10px 14px;
+ border:1.5px solid #cbd5e1;
+ border-radius: 8px;
+ font-size:14px;
+ outline:none;
+ transition:all 0.2s ease;
+ }
+  
+</style>
 </head>
 <body>
-<header>
-<h1> Charan Teja </h1>
-<p> 1st year B.Tech CSE (Data Science) </p>
-<nav>
-<ul>
-<li> <a href="#about"> About </a></li>
-<li> <a href="#projects"> Projects </a></li>
-<li> <a href="#contact"> Contact </a> </li>
-</ul>
-</nav>
-</header>
-<main>
-<section id="about">
-<h2> About Me </h2>
-<p> I am an aspiring data scientist learning <strong>HTML5</strong>,<strong>WEB DESIGN</strong> </p>
+   <main class="form-container">
+   <center> <h2> Student Registration </h2></center>
+   <form action="#" method="POST">
+   
+   <section>
+   <label for="fullName">Full Name :</label>
+   <br>
+  <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required minlenth="4">
+   </section>
+   <br>
+   <section>
+    <label for="userEmail">Email Address:</label>
+	<br>
+	<input type="email" id="userEmail" name="userEmail" placeholder="student@gmail.com" required>
+	</section>
+	<br>
+	<fieldset>
+	  <legend>Gender</legend>
+	  
+	  <input type="radio" id="male" name="gender" value="male" required>
+	  <label for="male">Male</label>
+	  
+	  <input type="radio" id="female" name="gender" value="female" required>
+	  <label for="female">Female</label>
+	  
+	  <input type="radio" id="other" name="gender" value="other" required>
+	  <label for="other">Other</label>
+	  </fieldset>
+	  <br>
+	  <section> 
+	  <label for="branch">Select Branch:</label><br>
+	  <select id="branch" name="branch" required>
+	     <option value="" disabled selected>-- Choose your Branch --</option>
+		 <option value="cse_ds">CSE (Data science)</option>
+		 <option value="cse_core">CSE CORE</option>
+		 <option value="cse_ai">CSE (AI & ML)</option>
+		 <option value="ece">ECE</option>
+		 </select>
+		 <br>
+		 <fieldset>
+		 <legend>Interests</legend>
+		 <input type="checkbox" id="webdev" name="interests" value="webdev">
+		 <label for="webdev">WEB DEVELOPMENT</label><br>
+		 <input type="checkbox" id="ai" name="interests" value="ai">
+		 <label for="ai">AI</label><br>
+		 <input type="checkbox" id="ml" name="interests" value="ml">
+		 <label for="ml">ML</label><br>
+		 </fieldset>
+		 <br>
+		 <section>
+		 <label for="bio">Short bio:</label><br>
+		 <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us about your learning goals..."> </textarea>
 </section>
-<section id="projects">
-<h2> Featured Projects </h2> 
-<article>
-<h3> Student registration Form </h3>
-<a href="file:///E:/cherry..html/fifth.html" target="_blank" rel="noopener noreferrer"> view code &rarr;</a>
-</article>
-</section>
-<aside>
-<h3> Current goal </h3>
-<p> Mastering modern front-end layouts and building 5 hands-on projects this semester.</p>
-</aside>
+<br>
+
+<button type="submit">Submit Application</button>
+<button type="reset">clear form</button>
+</form>
 </main>
-<footer>
-<p> &copy; 2026 Charan Teja. All rights reserved.</p>
-</footer>
 </body>
-</html>
+</html>		 
+		 
+  
